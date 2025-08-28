@@ -13,7 +13,11 @@ nav:
       - Mkdocs: Disciplina/mkdocs.md
       - CodeSpace: Disciplina/codespace.md
       - Avaliações: Disciplina/avaliacoes.md
+<<<<<<< HEAD
       - Roteiros: 
+=======
+      - Iniciação:
+>>>>>>> 77a9fc43f6391912fa23fb6683c8e184004b2687
           - Design Thinking: Disciplina/Roteiros/Iniciação/04_DesignThinking.md
   - Iniciação: 
       - Index: Iniciacao/index.md
@@ -102,6 +106,10 @@ plugins:
 theme:
   name: material
   logo: assets/ibmec_logo.png
+  font:
+    text: Roboto
+    code: Roboto Mono
+    size: 18px
   palette:
     
     - media: "(prefers-color-scheme)"

@@ -12,7 +12,7 @@ hide:
 
     ---
 
-    Lorem Ipsum     Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+    João Loss, Cesar Costa, Roberto Pereira
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PBE_25.2_8003_I)
 
@@ -20,7 +20,7 @@ hide:
 
     ---
 
-    Lorem Ipsum Lorem Ipsum Lorem Ipsum
+    Antônio Vieira, Fábio Vasconcellos, Rafael Leitao
 
     [:octicons-arrow-right-24: Repositório](https://github.com/Projetos-de-Extensao/PBE_25.2_8003_II)
 
