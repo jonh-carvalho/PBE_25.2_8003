@@ -2,15 +2,15 @@
 
 ## Commands
 
-*`mkdocs new [dir-name]` - Create a new project.
+* `mkdocs new [dir-name]` - Create a new project.
 
-*`mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs serve` - Start the live-reloading docs server.
 
-*`mkdocs build` - Build the documentation site.
+* `mkdocs build` - Build the documentation site.
 
-*`mkdocs -h` - Print help message and exit.
+* `mkdocs -h` - Print help message and exit.
 
-*mkdocs gh-deploy - Deploy site on github.
+* `mkdocs gh-deploy` - Deploy site on github.
 
 ##Project layout
 
