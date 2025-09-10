@@ -19,10 +19,11 @@ nav:
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
+      - Cenário: Iniciacao/cenario.md
       - 5w2h: Iniciacao/5w2h.md
-      - Design Thinking: Iniciacao/design_thinking.md
       - Brainstorming: Iniciacao/brainstorm.md
       - Mapa Mental: Iniciacao/mapa_mental.md
+      - Design Thinking: Iniciacao/design_thinking.md
       - Prototipagem Baixa Fidelidade: Iniciacao/prototipo_baixa_fidelidade.md
   - Elaboração:
       - Index: Elaboracao/index.md
