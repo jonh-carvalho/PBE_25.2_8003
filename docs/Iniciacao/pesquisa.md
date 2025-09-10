@@ -4,9 +4,14 @@ title: Pesquisa
 ---
 
 # Pesquisa
-## Pesquisa
-### Pesquisa
 
-Pesquisa realizada para compreensão das principais características do Aplicativo de **Streaming**.
+## Tema: Gestão de Monitoria
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+- Usuário: Monitores, Tech Assistant, Professores, CASA, coordenações
+
+- Cadastro de Monitoria
+
+- Seleção de Monitoria
+
+- Frequência de Monitoria
+
