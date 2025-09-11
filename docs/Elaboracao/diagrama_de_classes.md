@@ -1,87 +1,175 @@
 ---
-id: diagrama_de_casos de uso
-title: Diagrama de Casos de Uso
+id: diagrama_de_classes
+title: Diagrama de Classes Conceitual
 ---
 
-## Casos de Uso
+## Diagrama de Classes Conceitual
 
-### Descrição:
+### Descrição
 
-- Contas
-	- Criação
-	- Entrada
-	- Alteração
-	- Recuperar Senha
-	- Exclusão Lógica
-	- Visualização
+Este diagrama apresenta as principais classes conceituais do sistema de rede social, baseado nos casos de uso identificados na fase de elaboração.
 
-- Perfis
-	- Edição
-	- Pesquisar
-	- Visualização
-	- Seguir/Deixar de Seguir
+### Classes Identificadas
 
-- Postagens (Público) 	 	
-	- Criação
-	- Exclusão
-	- Interação
-	- Visualização
+#### **Usuario**
+- **Atributos:**
+  - id: Integer
+  - email: String
+  - senha: String (encriptada)
+  - dataCreacao: DateTime
+  - dataUltimoAcesso: DateTime
+  - status: Enum (Ativo, Inativo, Pendente)
+  - emailVerificado: Boolean
 
-- Mensagens (Privado)
-	- Criação
-	- Exclusão
-	- Visualização
+- **Responsabilidades:**
+  - Gerenciar autenticação do usuário
+  - Manter dados básicos da conta
+  - Controlar status da conta
 
-- Galerias
-	- Albuns
-- Blogs
-- Grupos
+#### **Perfil**
+- **Atributos:**
+  - id: Integer
+  - nome: String
+  - sobrenome: String
+  - bio: String
+  - foto: String (URL)
+  - dataNascimento: Date
+  - privacidade: Enum (Publico, Privado, Amigos)
 
-### Criação de uma conta no sistema
+- **Responsabilidades:**
+  - Armazenar informações pessoais do usuário
+  - Gerenciar configurações de privacidade
+  - Exibir informações para outros usuários
 
-* Atores:
+#### **Postagem**
+- **Atributos:**
+  - id: Integer
+  - conteudo: String
+  - dataPostagem: DateTime
+  - tipoPostagem: Enum (Texto, Imagem, Video)
+  - visibilidade: Enum (Publico, Amigos, Privado)
+  - qtdLikes: Integer
+  - qtdComentarios: Integer
 
-	- Usuário
-	- Sistema
+- **Responsabilidades:**
+  - Armazenar conteúdo público do usuário
+  - Gerenciar interações (likes, comentários)
+  - Controlar visibilidade da postagem
 
-- Pré-Condições:
-	- Nenhuma
+#### **Mensagem**
+- **Atributos:**
+  - id: Integer
+  - conteudo: String
+  - dataEnvio: DateTime
+  - lida: Boolean
+  - tipoMensagem: Enum (Texto, Imagem, Arquivo)
 
-* Fluxo Básico:
-    1. Usuário fornece e-mail, senha e confirmações
-    2. Dados do Usuário são validados pelo Sistema
-    3. Dados do Usuário são encriptados pelo Sistema
-    4. Dados do Usuário são persistidos pelo Sistema
-    5. Sistema gera um link com prazo de expiração
-    6. Sistema envia e-mail de verificação, com o link, para o Usuário
-    7. Usuário confirma o e-mail antes do link expirar
-    8. Sistema confirma que o Cadastro do Usuário foi realizado com sucesso
-    9. Sistema redireciona o Usuário para a página de Entrada
+- **Responsabilidades:**
+  - Gerenciar comunicação privada entre usuários
+  - Controlar status de leitura
+  - Armazenar diferentes tipos de conteúdo
 
-- Fluxos Alternativos:
-	- 2a. E-mail do Usuário é inválido
-		2a1. Sistema exibe mensagem de erro
-	- 2b. Senha do Usuário não respeita regras de segurança
-		- 2b1. Sistema exibe mensagem de erro
-	- 3a. Usuário tenta confirmar o e-mail depois de o link expirar
-		- 3a1. Sistema sugere que o Usuário realize um novo Cadastro
+#### **Comentario**
+- **Atributos:**
+  - id: Integer
+  - conteudo: String
+  - dataComentario: DateTime
+  - qtdLikes: Integer
 
-### Entrada do usuário no sistema
+- **Responsabilidades:**
+  - Permitir interação em postagens
+  - Manter histórico de comentários
 
-- Atores:
-	- Usuário
-	- Sistema
+#### **Relacionamento**
+- **Atributos:**
+  - id: Integer
+  - dataInicio: DateTime
+  - status: Enum (Seguindo, Amigo, Bloqueado)
+  - tipoRelacionamento: Enum (Seguidor, Amigo)
 
-- Pré-Condições:
-	Usuário deve estar cadastrado
+- **Responsabilidades:**
+  - Gerenciar conexões entre usuários
+  - Controlar tipos de relacionamento
 
-- Fluxo Básico:
-    - 1. Usuário fornece e-mail e senha
-	- 2. Sistema autentica o Usuário
-	- 3. Sistema redireciona o Usuário para a página inicial
+#### **Galeria**
+- **Atributos:**
+  - id: Integer
+  - nome: String
+  - descricao: String
+  - dataCriacao: DateTime
+  - privacidade: Enum (Publico, Privado, Amigos)
 
-- Fluxos Alternativos:
-	- 2a. Dados do Usuário Inválidos
-		- 2a1. Sistema exibe mensagem de erro
-	- 3a. Primeio acesso do Usuário
-		- 3a1. Sistema redireciona o Usuário para a página de edição de perfil
+- **Responsabilidades:**
+  - Organizar coleções de mídia
+  - Gerenciar álbuns de fotos/vídeos
+
+#### **Grupo**
+- **Atributos:**
+  - id: Integer
+  - nome: String
+  - descricao: String
+  - dataCriacao: DateTime
+  - tipoGrupo: Enum (Publico, Privado, Restrito)
+  - qtdMembros: Integer
+
+- **Responsabilidades:**
+  - Facilitar comunicação em grupo
+  - Gerenciar membros e permissões
+
+### Relacionamentos Principais
+
+1. **Usuario 1:1 Perfil** - Cada usuário possui um perfil
+2. **Usuario 1:* Postagem** - Um usuário pode criar várias postagens
+3. **Usuario *:* Relacionamento** - Usuários podem ter múltiplos relacionamentos
+4. **Postagem 1:* Comentario** - Uma postagem pode ter vários comentários
+5. **Usuario 1:* Comentario** - Um usuário pode fazer vários comentários
+6. **Usuario 1:* Mensagem** (como remetente) - Um usuário pode enviar várias mensagens
+7. **Usuario 1:* Mensagem** (como destinatário) - Um usuário pode receber várias mensagens
+8. **Usuario 1:* Galeria** - Um usuário pode ter várias galerias
+9. **Usuario *:* Grupo** - Usuários podem participar de múltiplos grupos
+
+### Diagrama UML (Representação Textual)
+
+```
+[Usuario]
+- id: Integer
+- email: String
+- senha: String
+- dataCreacao: DateTime
+- status: Enum
++ autenticar()
++ alterarSenha()
++ excluirConta()
+
+[Perfil]
+- id: Integer
+- nome: String
+- bio: String
+- foto: String
++ editarPerfil()
++ visualizarPerfil()
+
+[Postagem]
+- id: Integer
+- conteudo: String
+- dataPostagem: DateTime
+- visibilidade: Enum
++ criarPostagem()
++ excluirPostagem()
++ interagir()
+
+Usuario ||--|| Perfil : possui
+Usuario ||--o{ Postagem : cria
+Usuario }o--o{ Relacionamento : participa
+Postagem ||--o{ Comentario : recebe
+Usuario ||--o{ Comentario : faz
+```
+
+### Regras de Negócio Principais
+
+1. Todo usuário deve ter um email único no sistema
+2. Perfis podem ser públicos ou privados
+3. Postagens podem ter diferentes níveis de visibilidade
+4. Mensagens são sempre privadas entre dois usuários
+5. Relacionamentos podem ser unidirecionais (seguir) ou bidirecionais (amizade)
+6. Grupos podem ter diferentes tipos de acesso e moderação
