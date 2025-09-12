@@ -8,14 +8,16 @@ nav:
   - Home: index.md
   - Disciplina:
       - Aulas: Disciplina/aulas.md
+      - Avaliações: Disciplina/avaliacoes.md
       - Ambiente: Disciplina/ambiente.md
       - Github: Disciplina/github.md
-      - Mkdocs: Disciplina/mkdocs.md
       - CodeSpace: Disciplina/codespace.md
-      - Avaliações: Disciplina/avaliacoes.md
+      - Mkdocs: Disciplina/mkdocs.md
+      
       - Roteiros: 
           - Iniciação:
               - Design Thinking: Disciplina/Roteiros/Iniciação/04_DesignThinking.md
+              - UP: Disciplina/Roteiros/Iniciação/04_UPgithub.md
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
