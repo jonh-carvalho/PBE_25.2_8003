@@ -13,6 +13,11 @@ nav:
       - Github: Disciplina/github.md
       - CodeSpace: Disciplina/codespace.md
       - Mkdocs: Disciplina/mkdocs.md
+      - Dojo: 
+          - Index: Disciplina/dojo/dojo.md
+          - Setup: Disciplina/dojo/setup.md
+          - TDD/Pair: Disciplina/dojo/tddpairprogramming.md
+
       
       - Roteiros: 
           - Iniciação:
