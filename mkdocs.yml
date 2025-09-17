@@ -18,6 +18,9 @@ nav:
           - Iniciação:
               - Design Thinking: Disciplina/Roteiros/Iniciação/04_DesignThinking.md
               - UP: Disciplina/Roteiros/Iniciação/04_UPgithub.md
+          - Elaboração:
+              - Requisitos: Elaboracao/req_biblioteca.md
+              - Casos de Uso: Elaboracao/biblioteca_digital.md
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
