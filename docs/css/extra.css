@@ -1,4 +1,8 @@
 .time {
-    color:red;
-    font-weight:bold;
+    color: red;
+    font-weight: bold;
+}
+
+table td {
+    font-size: 1.4em;
 }
