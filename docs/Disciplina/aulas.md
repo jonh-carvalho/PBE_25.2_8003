@@ -12,8 +12,6 @@
 | __08__ - 24/09/25     | :material-check: Protótipo de Baixa Fidelidade |
 | __09__ - 01/10/25     | :material-check: AP1 - Apresentação Projeto |
 
-
-
  
 <!--
 | __05__ - 21/03/25     | :material-check: Elaboração 5w2h  <br> :material-check:[Brainstorm](../assets/Aulas/O%20processo%20de brainstorm.pdf) e [Mapa Mental](../assets/Aulas/Mapa%20Mental.pdf)|
