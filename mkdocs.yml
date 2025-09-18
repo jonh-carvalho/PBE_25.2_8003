@@ -13,6 +13,7 @@ nav:
       - Github: Disciplina/github.md
       - CodeSpace: Disciplina/codespace.md
       - Mkdocs: Disciplina/mkdocs.md
+      - Issues e Projects: Disciplina/issues_projects.md
       - Dojo: 
           - Index: Disciplina/dojo/dojo.md
           - Setup: Disciplina/dojo/setup.md
@@ -24,8 +25,9 @@ nav:
               - Design Thinking: Disciplina/Roteiros/Iniciação/04_DesignThinking.md
               - UP: Disciplina/Roteiros/Iniciação/04_UPgithub.md
           - Elaboração:
-              - Requisitos: Elaboracao/req_biblioteca.md
-              - Casos de Uso: Elaboracao/biblioteca_digital.md
+              - Requisitos: Disciplina/Roteiros/Elaboracao/req_biblioteca.md
+              - Casos de Uso: Disciplina/Roteiros/Elaboracao/biblioteca_digital.md
+              - Diagrama de Classes: Elaboracao/class_biblioteca.md
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
