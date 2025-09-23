@@ -8,7 +8,7 @@
 | __04__ - 27/08/25     | :material-check: [Design Thinking](http://127.0.0.1:8000/Disciplina/Roteiros/Inicia%C3%A7%C3%A3o/04_DesignThinking/) |
 | __05__ - 03/09/25     | :material-check:  Elaboração 5w2h  <br> :material-check: [Brainstorm](../assets/Aulas/O%20processo%20de brainstorm.pdf) <br> :material-check: [Mapa Mental](../assets/Aulas/Mapa%20Mental.pdf) <br> :material-check: [Engenharia de Requisitos](..//assets/Aulas/Engenharia%20de%20Requisitos_Cap05.pdf)|
 | __06__ - 10/10/25     | :material-check: [Análise OO e UML](../assets/Aulas/AnaliseOO&UML.pdf) <br> Biblioteca de inserção dos diagramas plantuml no [Markdown](https://mikhailkravets.github.io/mkdocs_puml/getting_started/)|
-| __07__ - 17/09/25     | :material-check: <br> - Diagrama de Casos de Uso <br> - [Classes](../assets/Aulas/Classes_Pacotes.pdf)  |
+| __07__ - 17/09/25     | :material-check: Diagrama de Casos de Uso <br> :material-check: [Classes](../assets/Aulas/Classes_Pacotes.pdf)  |
 | __08__ - 24/09/25     | :material-check: Protótipo de Baixa Fidelidade |
 | __09__ - 01/10/25     | :material-check: AP1 - Apresentação Projeto |
 
