@@ -1,156 +1,327 @@
 ---
-id: prototipobaixa
-title: Protótipo Baixa Fidelidade
+id: prototipobaixabiblioteca
+title: Protótipo Baixa Fidelidade - Biblioteca Digital
 ---
 ## Introdução
 
 <p align = "justify">
-A construção do protótipo de alta fidelidade auxilia a equipe de desenvolvimento a encontrar um nível de detalhes abrangentes, extrair funcionalidades, testar usabilidade, e também fornece uma base para o gerenciamento do projeto pois com o protótipo é possível realizar estimativas de quanto tempo será necessário desempenhar em cada funcionalidade.
+A construção do protótipo de baixa fidelidade auxilia a equipe de desenvolvimento a visualizar a estrutura e fluxo das interfaces do usuário de forma simplificada, permitindo identificar problemas de usabilidade precocemente, definir a arquitetura da informação e fornecer uma base sólida para o desenvolvimento das funcionalidades do sistema de biblioteca digital.
 </p>
 
 ## Metodologia
 
 <p align = "justify">
-Iniciamos o projeto através dos levantamentos iniciais da equipe, após discussões a ferramenta Figma foi selecionada para produzir o protótipo de alta fidelidade com auxílio do Material Design Color Tool.
+Para a criação dos protótipos de baixa fidelidade foi utilizada a ferramenta PlantUML com a extensão Salt, que permite criar wireframes de forma rápida e clara, focando na estrutura e organização dos elementos sem se preocupar com aspectos visuais detalhados. Os protótipos foram desenvolvidos com base nos requisitos funcionais levantados e nos casos de uso definidos para o sistema.
 </p>
 
-## Protótipo de alta fidelidade
+## Protótipos de Baixa Fidelidade
 
 ### Versão 1.0
 
-### Tela Login
+### Tela de Login
 
-[![Prototipo 1](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {T
+     + **BIBLIOTECA DIGITAL**
+  }
+  {
+    Email     | "usuario@email.com"
+    Senha     | "****"           
+    [  Esqueceu a senha?  ]
+    [ ENTRAR ]
+    --
+    Não tem conta? [ CADASTRAR ]
+  }
+}
+@endsalt
+```
 
-### Tela Cadastro 1
+### Tela de Cadastro
 
-[![Prototipo 2](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {T
+    + **CRIAR CONTA**
+  }
+  {
+    Nome completo | "João Silva"
+    Email         | "joao@email.com"  
+    Senha         | "****"
+    Confirmar     | "****"
+    [] Aceito os termos de uso
+    [ CADASTRAR ]
+    --
+    Já tem conta? [ FAZER LOGIN ]
+  }
+}
+@endsalt
+```
 
-### Tela Cadastro 2
+### Tela Principal - Catálogo
 
-[![Prototipo 3](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {T
+    + **BIBLIOTECA DIGITAL** | [🔍] | [👤] | [🔔]
+  }
+  {
+	**BUSCAR LIVROS:**
+    "Buscar livros..."  | [🔍]
+    --
+    .
+    **CATEGORIAS**
+    [Ficção] [Romance] [Técnico] [Biografia] [+]
+    --
+    .
+    **LIVROS EM DESTAQUE**
+    {-
+      .Título do Livro 1     | Autor 1     | [VER DETALHES]
+      .Título do Livro 2     | Autor 2     | [VER DETALHES] 
+      .Título do Livro 3     | Autor 3     | [VER DETALHES]
+      .Título do Livro 4     | Autor 4     | [VER DETALHES]
+    }
+    --
+    [🏠] [📚] [⭐] [👤]
+  }
+}
+@endsalt
+```
 
-### Tela Esqueceu Senha
+### Tela de Busca
 
-[![Prototipo 4](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {
+    **BUSCAR LIVROS** | [← VOLTAR]
+  }
+  .
+  {
+    "Buscar por título, autor..." | [🔍]
+    .
+    --
+    .
+    **FILTROS**
+    .
+    Categoria: [Todas ▼]
+    Formato: [Todos ▼]
+    Disponibilidade: | []Apenas disponíveis
+    --
+    .
+    **RESULTADOS (23 livros)**
+    .
+    {#
+      . O Grande Gatsby        | F. Scott    | PDF  | [RESERVAR]
+      . 1984                   | G. Orwell   | EPUB | [RESERVAR]
+      . Dom Casmurro           | M. Assis    | PDF  | [INDISPONÍVEL]
+      . O Cortiço              | A. Azevedo  | EPUB | [RESERVAR]
+    }
+    --
+    [🏠] [📚] [⭐] [👤]
+  }
+}
+@endsalt
+```
 
-### Tela do Feed
+### Tela de Detalhes do Livro
 
-[![Prototipo 5](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {
+    DETALHES DO LIVRO | [← VOLTAR]
+  }
+  {
+    [📖 CAPA DO LIVRO]
+    --
+    **O Grande Gatsby**
+    .
+    Autor: F. Scott Fitzgerald
+    Categoria: Ficção Clássica
+    Formato: PDF, EPUB
+    Status: Disponível
+    .
+    --
+    .
+    **Sinopse:**
+    .
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Sed do eiusmod tempor
+    incididunt ut labore et dolore magna...
+    --
+    [ RESERVAR LIVRO ]
+    --
+    [🏠] [📚] [⭐] [👤]
+  }
+}
+@endsalt
+```
 
-### Tela Feed com configurações
+### Tela de Minhas Reservas
 
-[![Prototipo 6](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {
+    MINHAS RESERVAS | [🔔]
+  }
+  {
+    **RESERVAS ATIVAS (2/5)**
+    {#
+      . O Grande Gatsby    | Expira: 2 dias | [BAIXAR] [CANCELAR]
+      . Dom Quixote        | Expira: 1 dia  | [BAIXAR] [CANCELAR]
+    }
+    --
+    .
+    **HISTÓRICO**
+    {#
+      . 1984              | Concluída | 15/09/2025
+      . O Cortiço         | Expirada  | 10/09/2025
+    }
+    --
+    [🏠] [📚] [⭐] [👤]
+  }
+}
+@endsalt
+```
 
-### Tela Perfil
+### Tela de Perfil do Usuário
 
-[![Prototipo 7](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {
+    **MEU PERFIL** | [⚙️]
+  }
+  {
+    [👤 FOTO]
+    **João Silva**
+    joao@email.com
+    --
+    **ASSINATURA**
+    Plano: Básico
+    Limite reservas: 5 livros
+    [ ASSINAR PREMIUM ]
+    --
+    **ESTATÍSTICAS**
+    Livros reservados: 15
+    Livros baixados: 12
+    --
+    [Alterar dados]
+    [Alterar senha]
+    [Sair da conta]
+    --
+    [🏠] [📚] [⭐] [👤]
+  }
+}
+@endsalt
+```
 
-### Tela Cadastrar torneio 1
+### Tela de Assinatura Premium
 
-[![Prototipo 8](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {
+    **ASSINATURA PREMIUM** | [← VOLTAR]
+  }
+  {
+    **PLANO PREMIUM**
+    --
+    ✓ Reservas ilimitadas
+    ✓ Acesso a livros exclusivos  
+    ✓ Downloads ilimitados
+    ✓ Reservas antecipadas
+    ✓ Sem anúncios
+    --
+    **PREÇO**
+    R$ 19,90/mês
+    --
+    [ ASSINAR AGORA ]
+    --
+    **FORMAS DE PAGAMENTO**
+    ()Cartão de Crédito
+    ()PIX
+    ()Boleto
+    --
+    [🏠] [📚] [⭐] [👤]
+  }
+}
+@endsalt
+```
 
-### Tela Cadastrar torneio 2
+### Tela de Notificações
 
-[![Prototipo 9](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+```plantuml
+@startsalt
+{+
+  {
+    **NOTIFICAÇÕES** | [← VOLTAR]
+  }
+  {
+    **HOJE**
+    {#
+      . 🔔  | Reserva de "1984" expira em 1 dia     | 10:30
+      . 📚  | Novo livro disponível: "Neuromancer" | 09:15
+    }
+    --
+    **ONTEM**
+    {#
+      . ✅ | Download de "O Grande Gatsby" realizado | 14:20
+      . ⏰ | Lembrete: Reserva expira amanhã        | 12:00
+    }
+    --
+    **ESTA SEMANA**
+    {#
+      . 💎 | Oferta Premium: 50% de desconto | 20/09
+      . 📖 | 5 novos livros na categoria Ficção | 18/09
+    }
+    --
+    [Marcar todas como lidas]
+    --
+    [🏠] [📚] [⭐] [👤]
+  }
+}
+@endsalt
+```
 
-### Tela Cadastrar torneio 3
-
-[![Prototipo 10](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 4
-
-[![Prototipo 11](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela com meus torneios
-
-[![Prototipo 12](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela de inscrição em torneio
-
-[![Prototipo 13](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
+## Fluxo de Navegação
 
 <p align = "justify">
-Na primeira versão do protótipo utilizamos a ferramenta <a href="https://material.io/resources/color/#!/?view.left=0&view.right=0">Material Design Color Tool</a>  para auxiliar na criação da paleta de cores do aplicativo, definimos as cores base do aplicativo mas as cores definidas para as telas 12 e 13 ainda não foram decididas.
+O sistema foi projetado com uma navegação intuitiva, onde o usuário pode:
 </p>
 
-### Versão 2.0
-
-### Versão 1.0
-
-### Tela Login
-
-[![Prototipo 1](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastro 1
-
-[![Prototipo 2](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastro 2
-
-[![Prototipo 3](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Esqueceu Senha
-
-[![Prototipo 4](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela do Feed
-
-[![Prototipo 5](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Feed com configurações
-
-[![Prototipo 6](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Perfil
-
-[![Prototipo 7](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 1
-
-[![Prototipo 8](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 2
-
-[![Prototipo 9](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 3
-
-[![Prototipo 10](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela Cadastrar torneio 4
-
-[![Prototipo 11](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela com meus torneios
-
-[![Prototipo 12](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-### Tela de inscrição em torneio
-
-[![Prototipo 13](../assets/Prototipo/image.png)](../assets/Prototipo/image.png)
-
-link para o `<a href="https://www.figma.com/">`Protótipo`</a>`
+1. **Login/Cadastro**: Acesso inicial ao sistema
+2. **Tela Principal**: Ponto central com destaque para livros e acesso às funcionalidades
+3. **Busca**: Ferramenta robusta de localização de livros com filtros
+4. **Detalhes**: Visualização completa das informações do livro
+5. **Reservas**: Gerenciamento das reservas ativas e histórico
+6. **Perfil**: Configurações pessoais e informações da assinatura
+7. **Premium**: Upgrade para funcionalidades avançadas
+8. **Notificações**: Comunicação sobre atividades e lembretes
 
 ## Conclusão
 
 <p align = "justify">
-A partir da elaboração do protótipo foi possível ter uma noção inicial da interface do usuário, definindo fluxo, paleta de cores, botões, app bars e diversas outras funcionalidades
+A partir da elaboração dos protótipos de baixa fidelidade foi possível definir a estrutura básica das interfaces, o fluxo de navegação entre as telas e a organização hierárquica das informações. Os wireframes serviram como base para validar os requisitos funcionais e identificar possíveis melhorias na experiência do usuário antes do desenvolvimento das interfaces de alta fidelidade.
 </p>
 
 ## Referências
 
-> Material Design Color Tool. Disponível em:  https://material.io/resources/color/#!/?view.left=0&view.right=0
+> PlantUML Salt. Disponível em: https://plantuml.com/salt
 
-> PMI. Um guia do conhecimento em gerenciamento de projetos. Guia PMBOK® 5a. ed. EUA: Project Management Institute, 2013.
+> PREECE, J.; ROGERS, Y.; SHARP, H. Design de interação: além da interação homem-computador. Porto Alegre: Bookman, 2005.
 
-> Ferramenta Figma. Disponível em https://www.figma.com
+> GARRETT, Jesse James. The elements of user experience: user-centered design for the web and beyond. 2ª ed. Berkeley: New Riders, 2010.
 
 ## Autor(es)
 
 | Data     | Versão | Descrição                            | Autor(es)                                                                            |
 | -------- | ------- | -------------------------------------- | ------------------------------------------------------------------------------------ |
-| 07/09/20 | 1.0     | Criação do documento                 | Lucas Alexandre e Matheus Estanislau                                                 |
-| 07/09/20 | 1.1     | Adicionado as imagens do protótipo    | Lucas Alexandre e Matheus Estanislau                                                 |
-| 07/09/20 | 1.2     | Adicionado conclusão e referências   | Lucas Alexandre e Matheus Estanislau                                                 |
-| 26/10/20 | 2.0     | Adicionada a versão 2.0 do protótipo | João Pedro, Lucas Alexandre, Matheus Estanislau, Moacir Mascarenha e Renan Cristyan |
+| 23/09/25 | 1.0     | Criação do documento                 |                                                  |
+| 23/09/25 | 1.1     | Adicionados protótipos PlantUML Salt    |                                                  |
+| 23/09/25 | 1.2     | Adicionado fluxo de navegação e conclusão   |                                                   |
