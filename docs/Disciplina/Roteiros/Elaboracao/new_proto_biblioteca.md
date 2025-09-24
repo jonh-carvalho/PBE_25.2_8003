@@ -42,11 +42,14 @@ O protótipo foi elaborado com base nos requisitos levantados e nos casos de uso
 
 ```plantuml
 @startsalt
-{
+{+
   {
-    "Biblioteca Digital"
-    [ "E-mail" ]
-    [ "Senha" ]
+   **Biblioteca Digital**
+   .
+    "E-mail" 
+    "Senha"
+    
+    .
     [ "Entrar" ]
     [ "Cadastrar" ]
     [ "Esqueceu a senha?" ]
@@ -59,14 +62,14 @@ O protótipo foi elaborado com base nos requisitos levantados e nos casos de uso
 
 ```plantuml
 @startsalt
-{
+{+
   {
-    "Cadastro de Usuário"
-    [ "Nome" ]
-    [ "E-mail" ]
-    [ "Senha" ]
-    [ "Confirmar Senha" ]
-    [ "Cadastrar" ]
+    Cadastro de Usuário
+     "Nome"
+     "E-mail"
+     "Senha"
+     "Confirmar Senha"
+    ["Cadastrar"]
     [ "Voltar ao Login" ]
   }
 }
@@ -77,12 +80,16 @@ O protótipo foi elaborado com base nos requisitos levantados e nos casos de uso
 
 ```
 @startsalt
-{
+{+
   {
-    "Feed de Livros"
-    [ "Barra de Busca" ]
-    [ "Lista de Livros" ]
-    [ "Detalhes" ]
+    " Autor, Título,... " | [ Barra de Busca ]
+    {+
+    () Feed de Livros | [Detalhes]  
+    () Feed de Livros
+    .
+    () Feed de Livros
+    }
+
     [ "Perfil" ]
     [ "Assinatura" ]
     [ "Notificações" ]
@@ -96,14 +103,12 @@ O protótipo foi elaborado com base nos requisitos levantados e nos casos de uso
 ```plantuml
 @startsalt
 {
-  {
-    "Detalhes do Livro"
-    [ "Capa" ]
-    [ "Título" ]
-    [ "Autor" ]
-    [ "Categoria" ]
-    [ "Formato" ]
-    [ "Status" ]
+  {+
+    Detalhes do Livro
+    Capa
+    Título: " ... " |  Autor: " ... "
+    Categoria: " ..." | Formato: " ..."
+    Status: "..." 
     [ "Reservar" ]
     [ "Baixar" ]
     [ "Voltar" ]
@@ -112,15 +117,17 @@ O protótipo foi elaborado com base nos requisitos levantados e nos casos de uso
 @endsalt
 ```
 
+
 ## Tela de Reserva
 
 ```plantuml
 @startsalt
 {
   {
-    "Reserva de Livro"
-    [ "Livro" ]
-    [ "Prazo de Retirada" ]
+    Reserva de Livro |  
+    .
+    "Livro"
+    "Prazo de Retirada"
     [ "Confirmar Reserva" ]
     [ "Cancelar" ]
   }
