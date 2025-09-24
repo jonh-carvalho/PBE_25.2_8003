@@ -22,11 +22,11 @@ nav:
       
       - Roteiros: 
           - Iniciação:
-              - Design Thinking: Disciplina/Roteiros/Iniciação/04_DesignThinking.md
-              - UP: Disciplina/Roteiros/Iniciação/04_UPgithub.md
+              - Design Thinking: Disciplina/Roteiros/Iniciacao/04_DesignThinking.md
+              - UP: Disciplina/Roteiros/Iniciacao/04_UPgithub.md
           - Elaboração:
               - Requisitos: Disciplina/Roteiros/Elaboracao/req_biblioteca.md
-              - Casos de Uso: Disciplina/Roteiros/Elaboracao/biblioteca_digital.md
+              - Casos de Uso: Disciplina/Roteiros/Elaboracao/uc_biblioteca.md
               - Diagrama de Classes: Elaboracao/class_biblioteca.md
   - Iniciação: 
       - Index: Iniciacao/index.md
@@ -36,14 +36,13 @@ nav:
       - Brainstorming: Iniciacao/brainstorm.md
       - Mapa Mental: Iniciacao/mapa_mental.md
       - Design Thinking: Iniciacao/design_thinking.md
-      - Prototipagem Baixa Fidelidade: Iniciacao/prototipo_baixa_fidelidade.md
   - Elaboração:
       - Index: Elaboracao/index.md
-      - Requisitos: Elaboracao/espreq.md
-      - Casos de Uso: Elaboracao/casos_de_uso.md
-      - Diagrama de Classes: Elaboracao/diagrama_de_classes.md
-      - Diagrama de Sequência: Elaboracao/diagrama_de_sequencia.md
-      - Protótipo de Alta Fidelidade: Elaboracao/prototipo_alta_fidelidade.md
+      - Requisitos: Elaboracao/doc_esp_req.md
+      - Casos de Uso: Elaboracao/diag_casos_de_uso.md
+      - Diagrama de Classes: Elaboracao/diag_de_classes.md
+      - Diagrama de Sequência: Elaboracao/diag_de_sequencia.md
+      - Protótipo de Baixa Fidelidade: Elaboracao/proto_baixa_fidelidade.md
       - Documento de Arquitetura: Elaboracao/das.md
   - Construção:
       - Index: Construcao/index.md

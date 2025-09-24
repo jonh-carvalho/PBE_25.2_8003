@@ -2,9 +2,8 @@
 
 #### **1. Introdução**
 
-- **Objetivo da sessão**: Apresentar como usar **Issues** e o template **Iterative Development Project** no GitHub para organizar, planejar e acompanhar o progresso de um projeto.
+- **Objetivo**: Apresentar como usar **Issues** e o template **Iterative Development Project** no GitHub para organizar, planejar e acompanhar o progresso de um projeto.
 
-- **Público-alvo**: Desenvolvedores, gerentes de projeto, equipes ágeis e qualquer pessoa interessada em colaboração e gestão de projetos no GitHub.
 
 - **Pré-requisitos**: 
     - Conta no GitHub.
