@@ -40,11 +40,11 @@ nav:
   - Elaboração:
       - Index: Elaboracao/index.md
       - Requisitos: Elaboracao/doc_esp_req.md
-      - Casos de Uso: Elaboracao/diag_casos_de_uso.md
+      - Diagrama de Casos de Uso: Elaboracao/diag_casos_de_uso.md
       - Diagrama de Classes: Elaboracao/diag_de_classes.md
       - Diagrama de Sequência: Elaboracao/diag_de_sequencia.md
       - Protótipo de Baixa Fidelidade: Elaboracao/proto_baixa_fidelidade.md
-      - Documento de Arquitetura: Elaboracao/das.md
+      
   - Construção:
       - Index: Construcao/index.md
       - Git Issues: Construcao/git_issues.md
