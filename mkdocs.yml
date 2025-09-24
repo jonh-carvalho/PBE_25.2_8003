@@ -28,7 +28,7 @@ nav:
               - Requisitos: Disciplina/Roteiros/Elaboracao/req_biblioteca.md
               - Casos de Uso: Disciplina/Roteiros/Elaboracao/uc_biblioteca.md
               - Diagrama de Classes: Elaboracao/class_biblioteca.md
-              - Prototipo de Baixa Fidelidade: Elaboracao/proto_baixa_fidelidade.md
+              - Protótipo de Baixa Fidelidade: Elaboracao/proto_baixa_fidelidade.md
   - Iniciação: 
       - Index: Iniciacao/index.md
       - Pesquisa: Iniciacao/pesquisa.md
