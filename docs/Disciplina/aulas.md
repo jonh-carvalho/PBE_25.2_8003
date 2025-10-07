@@ -11,6 +11,12 @@
 | __07__ - 17/09/25     | :material-check: Diagrama de Casos de Uso <br> :material-check: [Classes](../assets/Aulas/Classes_Pacotes.pdf)  |
 | __08__ - 24/09/25     | :material-check: Protótipo de Baixa Fidelidade |
 | __09__ - 01/10/25     | :material-check: AP1 - Apresentação Projeto |
+| __10__ - 08/10/25     | :material-check: Roteiros - POO - Introdução ao Django - RestAPI|
+| __11__ - 15/10/25     | :material-check: Feriado |
+| __12__ - 22/10/25     | :material-check: Relacionamentos |
+| __13__ - 29/10/25     | :material-check: Autenticação |
+| __14__ - 05/11/25     | :material-check: AS |
+
 
  
 <!--
