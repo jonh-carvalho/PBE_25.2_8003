@@ -19,7 +19,7 @@ nav:
           - Construção:
               - Poo: 
                   - Intro OO: Disciplina\Roteiros\Construcao\Poo\Conceitos-basicos-de-OO.pdf
-                  - Procedural x OO: Disciplina\Roteiros\Construcao\Poo\proceduralXpoo.ipynb
+                  - Procedural x OO: Disciplina\Roteiros\Construcao\Poo\ProceduralxPoo.ipynb
                   - Intro Python OO: Disciplina\Roteiros\Construcao\Poo\poo.ipynb
                   - Python OO: Disciplina\Roteiros\Construcao\Poo\Python-OO.pdf
               - Django:
