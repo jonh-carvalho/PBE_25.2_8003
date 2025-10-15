@@ -1,15 +1,12 @@
 """
 URL configuration for streaming_platform project.
 """
-from django.contrib import admin
-from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from drf_spectacular.views import (
-    SpectacularAPIView,
-    SpectacularRedocView,
-    SpectacularSwaggerView,
-)
+from django.contrib import admin
+from django.urls import include, path
+from drf_spectacular.views import (SpectacularAPIView, SpectacularRedocView,
+                                   SpectacularSwaggerView)
 
 urlpatterns = [
     # Admin
@@ -24,6 +21,7 @@ urlpatterns = [
     path('api/content/', include('apps.content.urls')),
     path('api/playlists/', include('apps.playlists.urls')),
     path('api/users/', include('apps.users.urls')),
+    path('api/auth/', include('apps.auth.urls')),
 ]
 
 # Serve media files in development

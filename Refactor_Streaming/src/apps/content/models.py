@@ -1,10 +1,10 @@
 """
 Content models for the streaming platform.
 """
-from django.db import models
-from django.contrib.auth.models import User
-from django.core.validators import FileExtensionValidator
 from apps.common.models import TimeStampedModel
+from django.conf import settings
+from django.core.validators import FileExtensionValidator
+from django.db import models
 
 
 class ContentType(models.TextChoices):
@@ -71,7 +71,7 @@ class Content(TimeStampedModel):
     
     # Relationships
     creator = models.ForeignKey(
-        User,
+        settings.AUTH_USER_MODEL,
         related_name='contents',
         on_delete=models.CASCADE,
         verbose_name='Criador'

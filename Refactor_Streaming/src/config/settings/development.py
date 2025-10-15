@@ -28,3 +28,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # CORS settings for development
 CORS_ALLOW_ALL_ORIGINS = True
+
+# Use custom user model (app label is 'users')
+AUTH_USER_MODEL = 'users.User'

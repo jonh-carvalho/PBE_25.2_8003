@@ -1,8 +1,7 @@
-from rest_framework import viewsets, generics
-from rest_framework.response import Response
-from rest_framework.decorators import action
+from rest_framework import viewsets
 from myapp.models import Produto
 from myapp.serializers import ProdutoSerializer
+
 
 class ProdutoViewSet(viewsets.ModelViewSet):
     queryset = Produto.objects.all()

@@ -1,9 +1,11 @@
 """
 Content serializers for the streaming platform.
 """
+from django.contrib.auth import get_user_model
 from rest_framework import serializers
-from django.contrib.auth.models import User
-from .models import Content, ContentType, ContentStatus
+
+User = get_user_model()
+from .models import Content, ContentStatus, ContentType
 
 
 class ContentCreatorSerializer(serializers.ModelSerializer):

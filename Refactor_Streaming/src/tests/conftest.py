@@ -2,6 +2,7 @@
 Pytest configuration and fixtures.
 """
 import os
+
 import django
 from django.conf import settings
 
@@ -10,8 +11,10 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings.development')
 django.setup()
 
 import pytest
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from rest_framework.test import APIClient
+
+User = get_user_model()
 
 
 @pytest.fixture
