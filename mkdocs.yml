@@ -18,13 +18,13 @@ nav:
               - Diagrama de Classes: Disciplina/Roteiros/Elaboração/class_biblioteca.md 
           - Construção:
               - Poo: 
-                  - Intro OO: Disciplina\Roteiros\Construção\Poo\Conceitos-basicos-de-OO.pdf
-                  - Procedural x OO: Disciplina\Roteiros\Construção\Poo\proceduralXpoo.ipynb
-                  - Intro Python OO: Disciplina\Roteiros\Construção\Poo\poo.ipynb
-                  - Python OO: Disciplina\Roteiros\Construção\Poo\Python-OO.pdf
+                  - Intro OO: Disciplina\Roteiros\Construacao\Poo\Conceitos-basicos-de-OO.pdf
+                  - Procedural x OO: Disciplina\Roteiros\Construcao\Poo\proceduralXpoo.ipynb
+                  - Intro Python OO: Disciplina\Roteiros\Construcao\Poo\poo.ipynb
+                  - Python OO: Disciplina\Roteiros\Construcao\Poo\Python-OO.pdf
               - Django:
-                  - Intro: Disciplina\Roteiros\Construção\Django\01_Intro.md
-                  - Intro Rest: Disciplina\Roteiros\Construção\Django\02_Intro Django Rest.md
+                  - Intro: Disciplina\Roteiros\Construcao\Django\01_Intro.md
+                  - Intro Rest: Disciplina\Roteiros\Construcao\Django\02_Intro Django Rest.md
                   - Streaming: 
                       - 0. Projeto Streaming: Disciplina\Roteiros\Construcao\Django\Streaming\00_Projeto_Streaming.md
                       - 1. Regras de Negócio: Disciplina\Roteiros\Construcao\Django\Streaming\01_Regras_Negócio_Streaming.md
