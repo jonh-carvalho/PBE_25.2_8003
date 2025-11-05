@@ -6,7 +6,6 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 class ContentViewSet(viewsets.ModelViewSet):
     queryset = Content.objects.all()
     serializer_class = ContentSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(creator=self.request.user)
